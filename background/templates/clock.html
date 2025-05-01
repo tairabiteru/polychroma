@@ -1,0 +1,18 @@
+{% if clock %}
+<div id="clock" class="clock" style="top: {{ clock.y }}vh; left: {{ clock.x }}vw; font-size: {{ clock.size}}"></div>
+<script>
+    function set_clock() {
+        var date = new Date();
+        {% if clock.show_datetime %}
+        clock_string = strftime("{{ clock.time_format }}", date);
+        clock_string = clock_string + "<br>" + strftime("{{ clock.date_format }}", date);
+        {% elif clock.show_date %}
+        clock_string = strftime("{{ clock.date_format }}", date);
+        {% elif clock.show_time %}
+        clock_string = strftime("{{ clock.time_format }}", date);
+        {% endif %}
+        document.getElementById("clock").innerHTML = clock_string;
+    }
+    const interval = setInterval(set_clock, 250);
+</script>
+{% endif %}

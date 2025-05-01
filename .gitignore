@@ -1,0 +1,7 @@
+**/__pycache__/**
+.venv/*
+media/*
+db.sqlite3
+Pipfile.lock
+polychroma.sh
+polychroma/settings.py

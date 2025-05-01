@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polychroma</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/background.js"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script src="/static/js/strftime.js"></script>
+  </head>
+  <body hx-headers='{"X-CSRFToken" : "{{ csrf_token }}"}'>
+    <div class="background" id="fade-in" hx-get="/get" hx-trigger="load" hx-swap="afterend swap:1s"></div>
+    <div class="clock-container" hx-get="/clock" hx-trigger="load" hx-swap="innerHTML"></div>
+  </body>
+</html>
