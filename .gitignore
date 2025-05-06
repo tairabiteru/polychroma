@@ -6,3 +6,4 @@ Pipfile.lock
 polychroma.sh
 polychroma/settings.py
 static/admin**
+**/migrations/**

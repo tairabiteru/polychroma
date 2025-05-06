@@ -17,7 +17,7 @@ def image_get(request):
     
     ctx = {'duration': int(screen.rotate_every.total_seconds())}
 
-    images = Background.objects.all()
+    images = Background.objects.filter(tags__in=screen.included_tags.all()).exclude(tags__in=screen.excluded_tags.all())
     image = random.choice(images)
     ctx['image_url'] = image.file.url
     response = render(request, "image.html", ctx)
