@@ -1,4 +1,4 @@
-# Polychroma v1.1.0
+# Polychroma v1.2.0
 The weirdest background changer that ever was.
 
 ## What is it?

@@ -1,5 +1,4 @@
 import datetime
-import typing as t
 from django.db import models
 from django.utils.functional import cached_property
 from django.utils.html import format_html
